@@ -48,4 +48,14 @@ export interface MultiChainPortfolio {
   chains: ChainBalances[];
   totalValueUSD: number;
   allTokens: TokenWithPrice[];
-} 
+}
+
+// Interface for QR code payment data
+export interface QRPaymentData {
+  merchantAddress: string;
+  amount: number;
+  tokenAddress?: string; // For ERC-20 tokens like USDT
+  tokenSymbol?: string;
+  chainId?: number;
+  erc681Link: string;
+}
